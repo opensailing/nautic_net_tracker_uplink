@@ -1,0 +1,16 @@
+export WIFI_SSID='hello'
+export WIFI_PASSWORD='world'
+
+echo -n "Configure [h]ost or [d]device target? "
+read
+
+case $REPLY in 
+  d)
+    echo 'Configuring device target'
+    export MIX_TARGET=rpi4
+    ;;
+  *)
+    echo 'Configuring host target'
+    export MIX_TARGET=host
+    ;;
+esac
