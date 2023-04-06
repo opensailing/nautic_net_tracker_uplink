@@ -1,8 +1,8 @@
-defmodule NauticNetTrackerUplinkTest do
+defmodule NauticNet.TrackerUplinkTest do
   use ExUnit.Case
-  doctest NauticNetTrackerUplink
+  doctest NauticNet.TrackerUplink
 
   test "greets the world" do
-    assert NauticNetTrackerUplink.hello() == :world
+    assert NauticNet.TrackerUplink.hello() == :world
   end
 end

@@ -1,6 +1,6 @@
-defmodule NauticNetTrackerUplink do
+defmodule NauticNet.TrackerUplink do
   @moduledoc """
-  Documentation for NauticNetTrackerUplink.
+  Documentation for NauticNet.TrackerUplink.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule NauticNetTrackerUplink do
 
   ## Examples
 
-      iex> NauticNetTrackerUplink.hello
+      iex> NauticNet.TrackerUplink.hello
       :world
 
   """

@@ -1,4 +1,4 @@
-defmodule NauticNetTrackerUplink.Application do
+defmodule NauticNet.TrackerUplink.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -9,13 +9,13 @@ defmodule NauticNetTrackerUplink.Application do
   def start(_type, _args) do
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: NauticNetTrackerUplink.Supervisor]
+    opts = [strategy: :one_for_one, name: NauticNet.TrackerUplink.Supervisor]
 
     children =
       [
         # Children for all targets
-        # Starts a worker by calling: NauticNetTrackerUplink.Worker.start_link(arg)
-        # {NauticNetTrackerUplink.Worker, arg},
+        # Starts a worker by calling: NauticNet.TrackerUplink.Worker.start_link(arg)
+        # {NauticNet.TrackerUplink.Worker, arg},
       ] ++ children(target())
 
     Supervisor.start_link(children, opts)
@@ -25,16 +25,16 @@ defmodule NauticNetTrackerUplink.Application do
   def children(:host) do
     [
       # Children that only run on the host
-      # Starts a worker by calling: NauticNetTrackerUplink.Worker.start_link(arg)
-      # {NauticNetTrackerUplink.Worker, arg},
+      # Starts a worker by calling: NauticNet.TrackerUplink.Worker.start_link(arg)
+      # {NauticNet.TrackerUplink.Worker, arg},
     ]
   end
 
   def children(_target) do
     [
       # Children for all targets except host
-      # Starts a worker by calling: NauticNetTrackerUplink.Worker.start_link(arg)
-      # {NauticNetTrackerUplink.Worker, arg},
+      # Starts a worker by calling: NauticNet.TrackerUplink.Worker.start_link(arg)
+      # {NauticNet.TrackerUplink.Worker, arg},
     ]
   end
 

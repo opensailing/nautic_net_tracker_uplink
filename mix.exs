@@ -1,4 +1,4 @@
-defmodule NauticNetTrackerUplink.MixProject do
+defmodule NauticNet.TrackerUplink.MixProject do
   use Mix.Project
 
   @app :nautic_net_tracker_uplink
@@ -22,7 +22,7 @@ defmodule NauticNetTrackerUplink.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      mod: {NauticNetTrackerUplink.Application, []},
+      mod: {NauticNet.TrackerUplink.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -54,7 +54,8 @@ defmodule NauticNetTrackerUplink.MixProject do
       # {:nerves_system_bbb, "~> 2.14", runtime: false, targets: :bbb},
       # {:nerves_system_osd32mp1, "~> 0.10", runtime: false, targets: :osd32mp1},
       # {:nerves_system_x86_64, "~> 1.19", runtime: false, targets: :x86_64},
-      # {:nerves_system_grisp2, "~> 0.3", runtime: false, targets: :grisp2}
+      # {:nerves_system_grisp2, "~> 0.3", runtime: false, targets: :grisp2},
+      {:lora, "~> 1.0"}
     ]
   end
 
