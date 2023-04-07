@@ -1,12 +1,16 @@
 export WIFI_SSID='hello'
 export WIFI_PASSWORD='world'
 
-echo -n "Configure [h]ost or [d]device target? "
+echo -n "Configure [h]ost, rpi[3], or rpi[4] target? "
 read
 
 case $REPLY in 
-  d)
-    echo 'Configuring device target'
+  3)
+    echo 'Configuring rpi3 device target'
+    export MIX_TARGET=rpi3
+    ;;
+  4)
+    echo 'Configuring rpi4 device target'
     export MIX_TARGET=rpi4
     ;;
   *)

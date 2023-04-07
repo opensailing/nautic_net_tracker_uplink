@@ -4,7 +4,7 @@ defmodule NauticNet.TrackerUplink.MixProject do
   @app :nautic_net_tracker_uplink
   @version "0.1.0"
   # @all_targets [:rpi, :rpi0, :rpi2, :rpi3, :rpi3a, :rpi4, :bbb, :osd32mp1, :x86_64, :grisp2]
-  @all_targets [:rpi4]
+  @all_targets [:rpi3, :rpi4]
 
   def project do
     [
@@ -48,7 +48,7 @@ defmodule NauticNet.TrackerUplink.MixProject do
       # {:nerves_system_rpi, "~> 1.19", runtime: false, targets: :rpi},
       # {:nerves_system_rpi0, "~> 1.19", runtime: false, targets: :rpi0},
       # {:nerves_system_rpi2, "~> 1.19", runtime: false, targets: :rpi2},
-      # {:nerves_system_rpi3, "~> 1.19", runtime: false, targets: :rpi3},
+      {:nerves_system_rpi3, "~> 1.19", runtime: false, targets: :rpi3},
       # {:nerves_system_rpi3a, "~> 1.19", runtime: false, targets: :rpi3a},
       {:nerves_system_rpi4, "~> 1.19", runtime: false, targets: :rpi4},
       # {:nerves_system_bbb, "~> 2.14", runtime: false, targets: :bbb},
