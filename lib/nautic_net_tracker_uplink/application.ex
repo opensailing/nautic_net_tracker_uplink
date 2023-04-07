@@ -33,6 +33,7 @@ defmodule NauticNet.TrackerUplink.Application do
   def children(_target) do
     [
       # NauticNet.TrackerUplink.LoraRadio
+      # NauticNet.TrackerUplink.Serial
 
       # Children for all targets except host
       # Starts a worker by calling: NauticNet.TrackerUplink.Worker.start_link(arg)
